@@ -7,8 +7,8 @@ public class sortSmallest {
      * @return
      */
     public int findSmallest(int[] arrayInput) {
-        int smallest = arrayInput[0];
-        int smallestIndex = 0;
+        int smallest = arrayInput[0]; //stores the smallest value
+        int smallestIndex = 0; // stores the index of the smallest value
         for (int i = 0; i < arrayInput.length; i++) {
             if (arrayInput[i] < smallest) {
                 smallest = arrayInput[i];
@@ -35,12 +35,13 @@ public class sortSmallest {
      * @param arrayIn
      * @return
      */
-    public int[] selectionSort(int[] arrayIn) {
+    public int[] selectionSort(int[] arrayIn) { //sorts an array
         int[] newArray = new int[arrayIn.length];
         for (int j : arrayIn) {
-            int smallestIndex = findSmallest(arrayIn);
+            int smallestIndex = findSmallest(arrayIn); // finds the smallest element in the array, and adds it to the new array
             swap(newArray, 0, smallestIndex); // currently only adds to the front. not good
         }
+        return newArray;
     }
 
 }
